@@ -1,0 +1,40 @@
+﻿<Window x:Class="CapiWater.Views.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Configurações da Capi" Height="350" Width="300"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFF0F5" 
+        FontFamily="Segoe UI Semibold"
+        ResizeMode="NoResize">
+
+    <Border Padding="20">
+        <StackPanel>
+            <TextBlock Text="Capigurações" FontSize="20" Foreground="#DB7093" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <TextBlock Text="Intervalo (minutos):" Foreground="#555"/>
+            <DockPanel Margin="0,5,0,15">
+                <TextBlock Text="{Binding ElementName=SliderInterval, Path=Value}" Width="30" DockPanel.Dock="Right" TextAlignment="Right"/>
+                <Slider x:Name="SliderInterval" Minimum="1" Maximum="120" TickFrequency="5" IsSnapToTickEnabled="True" Value="40"/>
+            </DockPanel>
+
+            <TextBlock Text="Meta Diária (Litros):" Foreground="#555"/>
+            <DockPanel Margin="0,5,0,15">
+                <TextBlock Text="{Binding ElementName=SliderGoal, Path=Value, StringFormat={}{0:F1}L}" Width="40" DockPanel.Dock="Right" TextAlignment="Right"/>
+                <Slider x:Name="SliderGoal" Minimum="0.5" Maximum="5.0" TickFrequency="0.5" IsSnapToTickEnabled="True" Value="2.0"/>
+            </DockPanel>
+
+            <CheckBox x:Name="CheckTopmost" Content="Sempre no topo" IsChecked="True" Margin="0,10,0,20" Foreground="#555"/>
+
+            <Button Content="Salvar Configurações" 
+                    Background="#FFB6C1" Foreground="White" 
+                    Height="40" Cursor="Hand"
+                    Click="Save_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </Border>
+</Window>

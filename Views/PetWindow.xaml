@@ -1,0 +1,62 @@
+﻿<Window x:Class="CapiWater.Views.PetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tb="clr-namespace:H.NotifyIcon;assembly=H.NotifyIcon.Wpf"
+        Title="CapiPet" Height="200" Width="200"
+        WindowStyle="None" AllowsTransparency="True" 
+        Background="Transparent" Topmost="True" 
+        ShowInTaskbar="False"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+    <Window.Resources>
+        <Storyboard x:Key="BounceAnimation">
+            <DoubleAnimation Storyboard.TargetName="CapiTransform" 
+                             Storyboard.TargetProperty="Y"
+                             From="0" To="-15" Duration="0:0:0.5" 
+                             AutoReverse="True" RepeatBehavior="Forever">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </Window.Resources>
+
+    <Grid>
+        <tb:TaskbarIcon x:Name="MyNotifyIcon"
+                        ToolTipText="CapiWater: Hidrate-se!"
+                        IconSource="pack://application:,,,/Assets/favicon.ico">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Mostrar Capivara" Click="ShowPet_Click" FontWeight="Bold"/>
+                    <MenuItem Header="Configurações" Click="Settings_Click" />
+                    <Separator />
+                    <MenuItem Header="Sair" Click="Exit_Click" />
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+
+        <Canvas>
+            <Border x:Name="SpeechBubble" 
+                    Visibility="Collapsed"
+                    Background="White" 
+                    CornerRadius="10" 
+                    Padding="8" 
+                    Canvas.Top="0" Canvas.Left="40"
+                    BorderBrush="#FFB6C1" 
+                    BorderThickness="2">
+                <TextBlock Text="Água, por favor! 💧" FontSize="12" FontWeight="Bold" Foreground="#555"/>
+            </Border>
+
+            <Image x:Name="CapiImage" 
+                   Source="/Assets/capi_idle.png" 
+                   Width="150" Height="150"
+                   Canvas.Top="40" Canvas.Left="25"
+                   Stretch="Uniform" Cursor="Hand"
+                   MouseRightButtonDown="Capi_MouseRightButtonDown">
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="CapiTransform" Y="0" />
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
+    </Grid>
+</Window>
