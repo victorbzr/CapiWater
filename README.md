@@ -34,7 +34,7 @@ A interação visual é o coração do CapiWater. Os estados do pet são carrega
 ### 👨‍💻 Autoria e Licença
 Este projeto foi idealizado e desenvolvido integralmente por **ancião**, como parte das iniciativas de software da organização **KabuSolutions**.
 
-* **Desenvolvedor**: [Seu Nome ou ancião]
+* **Desenvolvedor**: Victor Borges Zema Rosa
 * **Organização**: KabuSolutions
 * **Licença**: MIT License (consulte o arquivo `LICENSE` para detalhes).
 
@@ -53,7 +53,7 @@ Para contribuir com o **CapiWater**, siga o fluxo abaixo:
 
 1. **Faça um Fork do projeto**: Crie uma cópia do repositório em sua conta do GitHub.
 2. **Clone o seu Fork**:
-   git clone [https://github.com/SEU_USUARIO/CapiWater.git](https://github.com/SEU_USUARIO/CapiWater.git)
+   git clone [https://github.com/victorbzr/CapiWater.git](https://github.com/victorbzr/CapiWater.git)
 3.Crie uma Branch para sua alteração:
 	git checkout -b feature/NovaFuncionalidade
 	# ou	
@@ -81,7 +81,7 @@ O **CapiWater** é distribuído como um aplicativo **portátil** para Windows. I
 
 #### 📥 Como baixar
 Para obter a versão mais recente e estável do projeto:
-1. Vá até a seção [**Releases**](https://github.com/SEU_USUARIO/CapiWater/releases) do repositório.
+1. Vá até a seção [**Releases**](https://github.com/victorbzr/CapiWater/releases) do repositório.
 2. Baixe o arquivo `.zip` da versão mais atual.
 3. Extraia o conteúdo e execute o arquivo `CapiWater.exe`.
 
