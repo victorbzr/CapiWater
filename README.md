@@ -32,11 +32,11 @@ A interação visual é o coração do CapiWater. Os estados do pet são carrega
 ---
 
 ### 👨‍💻 Autoria e Licença
-Este projeto foi idealizado e desenvolvido integralmente por **ancião**, como parte das iniciativas de software da organização **KabuSolutions**.
+Este projeto foi idealizado e desenvolvido integralmente por **Victor Borges Zema Rosa**, como parte das iniciativas de software da organização **KabuSolutions**.
 
 * **Desenvolvedor**: Victor Borges Zema Rosa
 * **Organização**: KabuSolutions
-* **Licença**: MIT License (consulte o arquivo `LICENSE` para detalhes).
+* **Licença**: GPLv3 (consulte o arquivo `LICENSE` para detalhes).
 
 ---
 
@@ -52,21 +52,21 @@ Contribuições são o que fazem a comunidade open source um lugar incrível par
 Para contribuir com o **CapiWater**, siga o fluxo abaixo:
 
 1. **Faça um Fork do projeto**: Crie uma cópia do repositório em sua conta do GitHub.
-2. **Clone o seu Fork**:
-   git clone [https://github.com/victorbzr/CapiWater.git](https://github.com/victorbzr/CapiWater.git)
-3.Crie uma Branch para sua alteração:
+2. **Clone o seu Fork**: git clone [https://github.com/victorbzr/CapiWater.git](https://github.com/victorbzr/CapiWater.git)
+3. Crie uma Branch para sua alteração: 
 	git checkout -b feature/NovaFuncionalidade
-	# ou	
+		**ou**
 	git checkout -b fix/DescricaoDoBug
-4.Desenvolva e Valide: Realize suas alterações utilizando o SDK do .NET 9 e garanta que o projeto compila com sucesso.
-5.Commits Semânticos: Utilize o padrão de Conventional Commits para manter o histórico profissional:
+4. Desenvolva e Valide:
+	Realize suas alterações utilizando o SDK do .NET 9 e garanta que o projeto compila com sucesso.
+5. Commits Semânticos: Utilize o padrão de Conventional Commits para manter o histórico profissional:
 	. feat: para novas funcionalidades.
 	. fix: para correções de bugs.
 	. docs: para melhorias na documentação.
 	. refactor: para melhorias no código que não alteram funcionalidade.
 6. Push para o seu Fork:
 	git push origin feature/NovaFuncionalidade
-7. Abra um Pull Request: Submeta sua contribuição para revisão na branch principal.
+8. Abra um Pull Request: Submeta sua contribuição para revisão na branch principal.
 
 ### 🛠️ Requisitos de Desenvolvimento
 IDE: Visual Studio 2022 (v17.12+) ou VS Code com extensões C#.
