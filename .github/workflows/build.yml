@@ -2,16 +2,16 @@ name: .NET Build and Release
 
 on:
   push:
-    branches: [ "main" ] 
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: windows-latest 
+    runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v4 
+    - uses: actions/checkout@v4
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -22,10 +22,10 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet publish -c Release -r win-x64 --self-contained false /p:PublishSingleFile=true
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
       with:
         name: CapiWater-Executavel
-        path: CapiWater.APP/bin/Release/net9.0-windows/
+        path: "**/bin/Release/net9.0-windows/win-x64/publish/"
